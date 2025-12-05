@@ -11,5 +11,6 @@ public class PluginTestTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
 		ExtraModuleNames.Add("PluginTest");
-	}
+        ExtraModuleNames.Add("Test");
+    }
 }
