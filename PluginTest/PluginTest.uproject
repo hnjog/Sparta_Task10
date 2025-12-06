@@ -19,7 +19,8 @@
 			"AdditionalDependencies": [
 				"Engine",
 				"Test",
-				"Temporary"
+				"Temporary",
+				"TestData"
 			]
 		}
 	],
@@ -33,6 +34,10 @@
 		},
 		{
 			"Name": "Temporary",
+			"Enabled": true
+		},
+		{
+			"Name": "TestData",
 			"Enabled": true
 		}
 	]

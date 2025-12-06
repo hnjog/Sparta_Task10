@@ -52,6 +52,7 @@ APluginTestCharacter::APluginTestCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
+
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
@@ -62,6 +63,16 @@ void APluginTestCharacter::BeginPlay()
 
 	GetWorld()->SpawnActor(ATestActor::StaticClass());
 	GetWorld()->SpawnActor(ATemporaryActor::StaticClass());
+
+	CharaData = NewObject<UUCharacterData>(this);
+
+	CharaData->SetHP(1000);
+	CharaData->SetAttack(200);
+	CharaData->SetDefend(100);
+
+	UE_LOG(LogTemp, Log, TEXT("Character HP : %d"), CharaData->GetHP());
+	UE_LOG(LogTemp, Log, TEXT("Character Attack : %d"), CharaData->GetAttack());
+	UE_LOG(LogTemp, Log, TEXT("Character Defend : %d"), CharaData->GetDefend());
 }
 
 //////////////////////////////////////////////////////////////////////////

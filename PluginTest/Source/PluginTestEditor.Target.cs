@@ -13,5 +13,6 @@ public class PluginTestEditorTarget : TargetRules
 		ExtraModuleNames.Add("PluginTest");
         ExtraModuleNames.Add("Test");
         ExtraModuleNames.Add("Temporary");
+        ExtraModuleNames.Add("TestData");
     }
 }
