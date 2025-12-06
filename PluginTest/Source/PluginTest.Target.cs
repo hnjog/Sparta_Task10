@@ -12,5 +12,6 @@ public class PluginTestTarget : TargetRules
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
 		ExtraModuleNames.Add("PluginTest");
         ExtraModuleNames.Add("Test");
+        ExtraModuleNames.Add("Temporary");
     }
 }

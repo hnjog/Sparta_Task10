@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Test/Public/TestActor.h"
+#include "TemporaryActor.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -60,6 +61,7 @@ void APluginTestCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	GetWorld()->SpawnActor(ATestActor::StaticClass());
+	GetWorld()->SpawnActor(ATemporaryActor::StaticClass());
 }
 
 //////////////////////////////////////////////////////////////////////////

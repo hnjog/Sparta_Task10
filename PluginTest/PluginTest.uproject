@@ -18,7 +18,8 @@
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
 				"Engine",
-				"Test"
+				"Test",
+				"Temporary"
 			]
 		}
 	],
@@ -29,6 +30,10 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "Temporary",
+			"Enabled": true
 		}
 	]
 }
