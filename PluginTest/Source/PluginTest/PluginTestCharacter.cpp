@@ -10,6 +10,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Test/Public/TestActor.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -52,6 +53,13 @@ APluginTestCharacter::APluginTestCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
+}
+
+void APluginTestCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	GetWorld()->SpawnActor(ATestActor::StaticClass());
 }
 
 //////////////////////////////////////////////////////////////////////////

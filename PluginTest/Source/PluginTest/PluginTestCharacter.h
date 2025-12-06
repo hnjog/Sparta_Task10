@@ -46,7 +46,8 @@ class APluginTestCharacter : public ACharacter
 
 public:
 	APluginTestCharacter();
-	
+
+	virtual void BeginPlay() override;
 
 protected:
 
